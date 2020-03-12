@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #131313;
+    scroll-behavior: smooth;
+}
+
+.sections {
+    height: 100vh;
+}
+
+.main-page {
+    
+}
+
+.projects {
+    
+}
+
+.white-text {
+    color: #fff !important;
+}
+
+.main-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.main {
+    font-size: 3rem;
+    color: rgb(112, 112, 112);
+    font-weight: bold;
+    margin: 0;
+    transition: .3s;
+    cursor: default;
+}
+
+.main:hover {
+    transition: .3s;
+    color: #fff;
+}
+
+.navbar {
+    background-color: #1f1f1f;
+    color: #fff;
+}
+
+.info {
+    font-size: 1.3rem;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.card {
+    margin: 30px;
+    max-width: 40%;
+    width: 100vw;
+}
