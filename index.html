@@ -13,46 +13,73 @@
     <header id="home" class="main-page sections">
         <div class="main-text">
             <h1 class="main uk-animation-slide-top">Niklas Hästbacka</h1>
-            <p class="info uk-animation-shake">a junior webdeveloper</p>
-            <a href="#projects"><button class="uk-button uk-button-default uk-animation-slide-bottom"
-                    style="color: white;">check out my
-                    projects</button></a>
+            <p class="uk-animation-fade info">a junior webdeveloper</p>
+            <a href="#aboutme"><button class="scroll-down-button uk-button uk-button-default uk-animation-slide-bottom"
+                    style="color: white;">scroll down</button></a>
         </div>
     </header>
 
-    <section id="projects" class="projects sections">
-
-        <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
-            <nav class="navbar" class="uk-navbar-container">
-                <div class="uk-navbar-left">
+    <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+        <nav class="navbar" class="uk-navbar-container">
+            <div class="uk-navbar-left">
+                <ul class="uk-navbar-nav">
+                    <li class="uk-active nav-items"><a style="color: white" href="#home">home</a></li>
+                    <li class="uk-active nav-items"><a style="color: white" href="#aboutme">about</a></li>
+                    <li class="uk-active nav-items"><a style="color: white" href="#projects">projects</a></li>
+                    <li class="uk-active nav-items"><a style="color: white" href="#contact">contact</a></li>
+                </ul>
+                <div class="uk-navbar-right">
                     <ul class="uk-navbar-nav">
-                        <li class="uk-active"><a style="color: white;" href="#home">home</a></li>
-                        <li class="uk-active"><a style="color: white;" href="#projects">projects</a></li>
-                        <li class="uk-active"><a style="color: white;" href="">contact</a></li>
+                        <li class="uk-active nav-items"><a href="https://github.com/NiklasHastbacka" target="_blank"
+                                style="color: white" uk-icon="github"></a></li>
+                        <li class="uk-active nav-items"><a
+                                href="https://www.linkedin.com/in/niklas-h%C3%A4stbacka-002542182/" target="_blank"
+                                style="color: white" uk-icon="linkedin"></a></li>
                     </ul>
                 </div>
-            </nav>
-        </div>
+            </div>
+        </nav>
+    </div>
 
-        <div>
+    <div id="aboutme">
+        <section class="sections aboutme">
+            <div class="info-text">
+                <h1 class="wrapper" style="color: white">a junior webdeveloper from Ostrobothnia<p
+                        style="font-size: small; ">yep</p>
+                </h1>
+            </div>
+        </section>
+    </div>
+
+    <section id="projects" class="projects sections">
+
+        <div class="wrapper">
             <div class="uk-child-width-1-2@s uk-grid-match cards" uk-grid>
-                <div class="uk-card uk-card-default uk-card-hover uk-card-body card">
-                    <h3 class="uk-card-title">Default</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </div>
-                <div class="uk-card uk-card-default uk-card-hover uk-card-body card">
-                    <h3 class="uk-card-title">Default</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 
-                </div>
-                <div class="uk-card uk-card-default uk-card-hover uk-card-body card">
-                    <h3 class="uk-card-title">Default</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <div class="uk-card uk-card-default uk-card-hover uk-card-body card"
+                    uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
+                    <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+                        <img src="./images/dicerollergame.png">
+                        <a href="https://github.com/NiklasHastbacka/Dices" target="_blank">
+                            <div
+                                class="uk-transition-fade uk-position-cover uk-position-small uk-overlay uk-overlay-default uk-flex uk-flex-center uk-flex-middle">
+                                <p class="uk-h4 uk-margin-remove">Dice Roller Game</p>
+                            </div>
+                        </a>
+                    </div>
                 </div>
 
-                <div class="uk-card uk-card-default uk-card-hover uk-card-body card">
-                    <h3 class="uk-card-title">Default</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <div class="uk-card uk-card-default uk-card-hover uk-card-body card"
+                    uk-scrollspy="cls: uk-animation-slide-right; repeat: true">
+                    <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+                        <a href="https://github.com/NiklasHastbacka/First-Phaser-Game" target="_blank">
+                            <img src="./images/firstphasergame.png">
+                            <div
+                                class="uk-transition-fade uk-position-cover uk-position-small uk-overlay uk-overlay-default uk-flex uk-flex-center uk-flex-middle">
+                                <p class="uk-h4 uk-margin-remove">My first Phaser game</p>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -60,11 +87,39 @@
     </section>
 
     <section id="contact" class="contact sections">
+        <div class="wrapper contacts">
+            <h1>Contact me</h1>
+            <div class="contacting">
+                <form id="fs-frm" class="uk-legend" name="simple-contact-form" accept-charset="utf-8"
+                    action="https://formspree.io/niklasp.hastbacka@gmail.com" method="post">
+                    <fieldset class="contactform" id="fs-frm-inputs">
+                        <label for="full-name">Full Name</label>
+                        <input class="form-inputs" type="text" name="name" id="full-name" placeholder="First and Last" required="">
+                        <label for="email-address">Email Address</label>
+                        <input class="form-inputs" type="email" name="_replyto" id="email-address" placeholder="email@domain.tld"
+                            required="">
+                        <label for="message">Message</label>
+                        <div>
+                        <textarea class="form-inputs" rows="5" name="message" id="message"
+                            placeholder="Aenean lacinia bibendum nulla sed consectetur."
+                            required=""></textarea>
+                        </div>
+                        <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+                    </fieldset>
+                    <input class="form-button" type="submit" value="Submit">
+                </form>
+            </div>
 
+            <p>niklasp.hastbacka(at)gmail.com</p>
+            <div class="links">
+                <span uk-icon="icon: github"></span>
+                <span uk-icon="icon: linkedin"></span>
+            </div>
+        </div>
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.3/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.3/dist/js/uikit-icons.min.js"></script>
-</body>
 
+</body>
 </html>
